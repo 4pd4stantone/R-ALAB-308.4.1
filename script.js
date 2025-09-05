@@ -55,7 +55,7 @@ let objectArr = []
 for (j = 1 ; j < arrOfArr.length ; j++ ) {
   let arrObj = {}  
   for ( k = 0 ; k < arrOfArr[j].length ; k++) {
-      let newKey = arrOfArr[0][k].toLocaleLowerCase();
+      let newKey = arrOfArr[0][k].toLowerCase();
       console.log(newKey, arrOfArr[j])
       arrObj[newKey] = arrOfArr[j][k]
     }
@@ -107,11 +107,13 @@ for (let i = 0 ; i < objectArr.length ; i++) {
     console.log(row);
     for (let j = 0 ; j < rowHeaders.length ; j++) {
       let key = rowHeaders[j];
+      console.log(key)
       row.push(objectArr[i][key])
     }
     newCSV += `${row.join(',')}\n`
 }
 console.log(newCSV)
+
 
 
 
